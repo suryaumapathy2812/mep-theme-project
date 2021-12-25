@@ -1,0 +1,35 @@
+{
+  "projectType": "library",
+  "root": "libs/theme",
+  "sourceRoot": "libs/theme/src",
+  "prefix": "mep",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/theme"],
+      "options": {
+        "project": "libs/theme/ng-package.json",
+        "tailwindConfig": "libs/theme/tailwind.config.js"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/theme/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/theme/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/theme/src/**/*.ts",
+          "libs/theme/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
