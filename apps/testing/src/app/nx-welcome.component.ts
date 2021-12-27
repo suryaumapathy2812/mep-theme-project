@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 /* eslint-disable */
 
@@ -844,13 +843,7 @@ nx affected:e2e</pre>
   encapsulation: ViewEncapsulation.None,
 })
 export class NxWelcomeComponent implements OnInit {
-  constructor(
-    private actRoute: ActivatedRoute
-  ) { }
+  constructor() {}
 
-  ngOnInit(): void {
-
-    this.actRoute.data.subscribe(res => console.log(res))
-
-  }
+  ngOnInit(): void {}
 }

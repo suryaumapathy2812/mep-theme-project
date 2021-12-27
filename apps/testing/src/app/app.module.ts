@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { AdminLayoutModule, DefaultLayoutModule } from '@suryaumapathy@2812/mep-theme';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { ThemeModule } from '@suryaumapathy@2812/mep-theme';
-import { AppRoutingModule } from './app.routing';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent
+  ],
   imports: [
     BrowserModule,
-    ThemeModule,
-    AppRoutingModule,
+    DefaultLayoutModule,
+    AdminLayoutModule,
+    RouterModule.forRoot([{ path: "", component: NxWelcomeComponent }])
   ],
   providers: [],
   bootstrap: [AppComponent],
