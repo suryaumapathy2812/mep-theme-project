@@ -23,7 +23,7 @@
     "copy:schematics": "cd libs/theme && npm run build && cd ./../../",
     "pack:theme": "ng build --project theme && npm run copy:schematics && cd dist/libs/theme && npm pack",
     "pack": "npm run clean && npm run pack:theme",
-    "prepublish": "cd dist/libs/theme"
+    "publish": "cd dist/libs/theme && npm publish"
   },
   "dependencies": {
     "@angular/animations": "~13.1.0",
