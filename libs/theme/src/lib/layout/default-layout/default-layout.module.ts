@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { DefaultLayoutComponent } from './default-layout.component';
 import { RouterModule } from '@angular/router';
+import { IconsModule } from '../../core/shared/icons/icons.module';
 
 
 
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    IconsModule
   ], exports: [
     HeaderComponent,
     DefaultLayoutComponent,

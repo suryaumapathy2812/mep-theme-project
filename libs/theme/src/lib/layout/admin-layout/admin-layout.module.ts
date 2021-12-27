@@ -4,6 +4,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminLayoutComponent } from './admin-layout.component';
 import { RouterModule } from '@angular/router';
+import { IconsModule } from '../../core/shared/icons/icons.module';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    IconsModule
   ], exports: [
     AdminLayoutComponent,
     AdminSidebarComponent,

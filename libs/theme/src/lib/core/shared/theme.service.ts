@@ -13,7 +13,7 @@ const routes: NavRoute[] = [
   {
     name: "Dashboard",
     path: "/",
-    icon: "",
+    icon: "home",
     isActive: false
   }, {
     name: "Team",
@@ -28,12 +28,12 @@ const routes: NavRoute[] = [
   }, {
     name: "Calender",
     path: "/",
-    icon: "calender",
+    icon: "calendar",
     isActive: false
   }, {
     name: "Documents",
     path: "/",
-    icon: "index",
+    icon: "inbox",
     isActive: false
   }, {
     name: "Report",

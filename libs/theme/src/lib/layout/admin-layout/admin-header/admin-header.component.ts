@@ -11,6 +11,7 @@ import { AdminLayoutService } from '../admin-layout.service';
 })
 export class AdminHeaderComponent implements OnInit {
 
+  showProfileDropdown = false;
   navItems!: Observable<NavRoute[]>;
   showSidebar!: Observable<boolean>;
 
@@ -26,5 +27,9 @@ export class AdminHeaderComponent implements OnInit {
 
   toggleSidebar() {
     this.adminLayoutService.toggleSidebar();
+  }
+
+  toggleProfileDropdown() {
+    this.showProfileDropdown = !this.showProfileDropdown;
   }
 }

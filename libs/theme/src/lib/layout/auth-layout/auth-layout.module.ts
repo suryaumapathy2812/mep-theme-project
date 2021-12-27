@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthLayoutComponent } from './auth-layout.component';
+import { IconsModule } from '../../core/shared/icons/icons.module';
 
 
 
@@ -9,7 +10,8 @@ import { AuthLayoutComponent } from './auth-layout.component';
     AuthLayoutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IconsModule
   ], exports: [
     AuthLayoutComponent
   ]
