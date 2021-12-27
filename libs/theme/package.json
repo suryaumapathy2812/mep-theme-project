@@ -1,11 +1,43 @@
 {
-  "name": "@suryaumapathy@2812/mep-theme",
-  "version": "0.0.1",
+  "name": "mep-theme",
+  "version": "1.0.0",
+  "description": "Theme with Website layout, Admin Dashboard",
+  "license": "MIT",
+  "author": "suryaumapathy2812",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suryaumapathy2812/mep-theme-project"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "schematics": "./schematics/collection.json",
+  "scripts": {
+    "build": "tsc -p tsconfig.schematics.json",
+    "copy:collection": "cpr schematics/collection.json ../../dist/libs/theme/schematics/collection.json",
+    "postbuild": "npm run copy:collection"
+  },
+  "ng-add": {
+    "save": "devDependencies"
+  },
+  "private": true,
   "peerDependencies": {
     "@angular/common": "^13.1.0",
-    "@angular/core": "^13.1.0"
+    "@angular/core": "^13.1.0",
+    "tailwindcss": "^3.0.2",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "angular-feather": "^6.1.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "typescript": "~4.4.3",
+    "cpr": "^3.0.1"
   }
 }

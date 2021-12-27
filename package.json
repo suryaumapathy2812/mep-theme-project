@@ -1,13 +1,28 @@
 {
-  "name": "mep",
-  "version": "0.0.0",
+  "name": "@suryaumapathy2812/mep-theme-project",
+  "version": "1.0.0",
+  "description": "Theme with Website layout, Admin Dashboard",
   "license": "MIT",
+  "author": "suryaumapathy2812",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suryaumapathy2812/mep-theme-project"
+  },
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "ng": "nx",
+    "clean": "rimraf dist/* && rimraf tmp/*",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "copy:schematics": "cd libs/theme && npm run build && cd ./../../",
+    "pack:theme": "ng build --project theme && npm run copy:schematics && cd dist/libs/theme && npm pack",
+    "pack": "npm run clean && npm run pack:theme"
   },
   "private": true,
   "dependencies": {
@@ -48,6 +63,7 @@
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
     "autoprefixer": "^10.4.0",
+    "cpr": "^3.0.1",
     "cypress": "^9.1.0",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.1.0",
