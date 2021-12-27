@@ -25,7 +25,6 @@
     "pack": "npm run clean && npm run pack:theme",
     "prepublish": "cd dist/libs/theme"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.0",
     "@angular/common": "~13.1.0",

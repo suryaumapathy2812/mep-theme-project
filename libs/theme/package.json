@@ -23,7 +23,6 @@
   "ng-add": {
     "save": "devDependencies"
   },
-  "private": true,
   "peerDependencies": {
     "@angular/common": "^13.1.0",
     "@angular/core": "^13.1.0",
