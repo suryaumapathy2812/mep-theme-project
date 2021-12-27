@@ -7,15 +7,25 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node 12.x
+        uses: actions/setup-node@v1
         with:
+          node-version: '12.x'
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
           scope: '@suryaumapathy2812'
+
       # Publish to GitHub Packages
-      - run: npm run pack
-      - run: npm publish
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Pack
+        run: npm run pack
+
+      - name: publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
