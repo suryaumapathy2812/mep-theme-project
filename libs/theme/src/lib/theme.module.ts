@@ -10,7 +10,7 @@ import { ThemeService } from './core/shared/theme.service';
     CommonModule,
     AdminLayoutModule,
     AuthLayoutModule,
-    DefaultLayoutModule
+    DefaultLayoutModule,
   ],
   providers: [
     ThemeService

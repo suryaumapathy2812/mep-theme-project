@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { AdminLayoutModule, DefaultLayoutModule } from '@suryaumapathy@2812/mep-theme';
+import { ThemeModule } from '@suryaumapathy@2812/mep-theme';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { routes } from "./app.routing";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,9 +14,8 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   ],
   imports: [
     BrowserModule,
-    DefaultLayoutModule,
-    AdminLayoutModule,
-    RouterModule.forRoot([{ path: "", component: NxWelcomeComponent }])
+    ThemeModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent],

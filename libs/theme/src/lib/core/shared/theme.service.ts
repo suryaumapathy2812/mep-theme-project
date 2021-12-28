@@ -9,7 +9,7 @@ export interface NavRoute {
   isActive: boolean
 }
 
-const routes: NavRoute[] = [
+const navItemsList: NavRoute[] = [
   {
     name: "Dashboard",
     path: "/",
@@ -57,8 +57,9 @@ export class ThemeService {
   public srcHeight = this._srcHeight.asObservable();
   public srcWidth = this._srcWidth.asObservable();
 
-  constructor() {
-    this._navList.next(routes);
+  constructor(
+  ) {
+    this._navList.next(navItemsList);
     this.onWindowResize();
   }
 
