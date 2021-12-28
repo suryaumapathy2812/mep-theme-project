@@ -22,8 +22,7 @@
     "build": "nx build",
     "copy:schematics": "cd libs/theme && npm run build && cd ./../../",
     "pack:theme": "ng build --project theme && npm run copy:schematics && cd dist/libs/theme && npm pack",
-    "pack": "npm run clean && npm run pack:theme",
-    "publish": "cd dist/libs/theme && npm publish"
+    "pack": "npm run clean && npm run pack:theme"
   },
   "dependencies": {
     "@angular/animations": "~13.1.0",
