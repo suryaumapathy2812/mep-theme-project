@@ -28,11 +28,8 @@ jobs:
 
       - name: Pack
         run: npm run pack
-
-      - name: cd Dist/libs/theme
-        run: cd ./dist/libs/theme
-
+        
       - name: publish
-        run: npm publish
+        run: cd ./dist/libs/theme/ && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
