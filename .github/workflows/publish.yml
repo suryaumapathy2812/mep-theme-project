@@ -1,5 +1,9 @@
 name: Publish Theme
-on: [push, pull_request]
+on:  
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,6 +28,9 @@ jobs:
 
       - name: Pack
         run: npm run pack
+
+      - name: cd Dist/libs/theme
+        run: cd ./dist/libs/theme
 
       - name: publish
         run: npm publish

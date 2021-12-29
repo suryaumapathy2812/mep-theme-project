@@ -12,7 +12,7 @@ export function ngAdd(options: any): Rule {
         addPackageJsonDependency(tree, { name: '@tailwindcss/forms', version: '^0.4.0', type: NodeDependencyType.Default })
         addPackageJsonDependency(tree, { name: '@tailwindcss/typography', version: '^0.5.0', type: NodeDependencyType.Default })
         addPackageJsonDependency(tree, { name: '@tailwindcss/aspect-ratio', version: '^0.4.0', type: NodeDependencyType.Default })
-        addPackageJsonDependency(tree, { name: 'angular-feather', version: '^6.1.0', type: NodeDependencyType.Default })
+        // addPackageJsonDependency(tree, { name: 'angular-feather', version: '^6.1.0', type: NodeDependencyType.Default })
 
         context.addTask(new NodePackageInstallTask());
         return tree;

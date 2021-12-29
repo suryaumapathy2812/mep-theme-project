@@ -1,16 +1,9 @@
 {
-  "name": "@suryaumapathy2812/mep-theme",
+  "name": "mep-workspace",
   "version": "1.0.0",
   "description": "Theme with Website layout, Admin Dashboard",
   "license": "MIT",
   "author": "suryaumapathy2812",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/suryaumapathy2812/mep-theme-project"
-  },
   "engines": {
     "node": ">=14"
   },
@@ -21,7 +14,8 @@
     "start": "nx serve",
     "build": "nx build",
     "copy:schematics": "cd libs/theme && npm run build && cd ./../../",
-    "pack:theme": "ng build --project theme && npm run copy:schematics && cd dist/libs/theme && npm pack",
+    "build:theme": "ng build --project theme && npm run copy:schematics",
+    "pack:theme": "npm run build:theme && cd dist/libs/theme && npm pack",
     "pack": "npm run clean && npm run pack:theme"
   },
   "dependencies": {
