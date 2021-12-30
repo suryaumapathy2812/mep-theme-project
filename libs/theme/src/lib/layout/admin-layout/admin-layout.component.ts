@@ -4,7 +4,6 @@ import { ThemeService } from '../../core/shared/theme.service';
 @Component({
   selector: 'mep-admin-layout',
   templateUrl: './admin-layout.component.html',
-  styles: []
 })
 export class AdminLayoutComponent implements OnInit {
 

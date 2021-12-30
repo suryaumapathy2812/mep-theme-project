@@ -14,12 +14,12 @@ const navItemsList: NavRoute[] = [
     name: "Dashboard",
     path: "/",
     icon: "home",
-    isActive: false
+    isActive: true
   }, {
     name: "Team",
     path: "/",
     icon: "users",
-    isActive: true
+    isActive: false
   }, {
     name: "Projects",
     path: "/",
