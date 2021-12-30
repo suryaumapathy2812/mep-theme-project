@@ -4,7 +4,7 @@ const { join } = require('path');
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  mode: 'jit',
+  // mode: 'jit',
   content: [
     join(__dirname, 'src/**/*.{html,ts}'),
     ...createGlobPatternsForDependencies(__dirname),
