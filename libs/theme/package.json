@@ -1,6 +1,6 @@
 {
   "name": "@suryaumapathy2812/mep-theme",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Theme with Website layout, Admin Dashboard",
   "license": "MIT",
   "author": "suryaumapathy2812",
@@ -16,10 +16,18 @@
   },
   "schematics": "./schematics/collection.json",
   "scripts": {
-    "build:css": "npx tailwindcss-cli@latest build -o ./src/lib/mep.scss",
+    "build:css-min": "npx tailwindcss-cli@latest build -o ./src/lib/mep.min.css --minify",
+    "build:scss": "npx tailwindcss-cli@latest build -o ./src/lib/mep.scss",
+    "prebuild:css": "npm run build:scss",
+    "build:css": "npx tailwindcss-cli@latest build -o ./src/lib/mep.css",
+    "postbuild:css": "npm run build:css-min",
     "build": "npm run build:css &&  tsc -p tsconfig.schematics.json",
     "copy:collection": "cpr schematics/collection.json ../../dist/libs/theme/schematics/collection.json",
-    "copy:css": "cpr src/lib/mep.scss ../../dist/libs/theme/mep.scss",
+    "copy:scss": "cpr src/lib/mep.scss ../../dist/libs/theme/mep.scss",
+    "copy:css-min": "cpr src/lib/mep.min.css ../../dist/libs/theme/mep.min.css",
+    "precopy:css": "npm run copy:scss",
+    "copy:css": "cpr src/lib/mep.css ../../dist/libs/theme/mep.css",
+    "postcopy:css": "npm run copy:css-min",
     "postbuild": "npm run copy:collection && npm run copy:css"
   },
   "ng-add": {
