@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "lib": [
+            "ES2018",
+            "DOM"
+        ],
+        "declaration": true,
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "noEmitOnError": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "rootDir": "schematics/",
+        "outDir": "./../../dist/theme/schematics",
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "target": "ES6",
+        "types": [
+            "node"
+        ]
+    },
+    "include": [
+        "schematics/**/*"
+    ],
+    "exclude": [
+        "schematics/*/files/**/*"
+    ]
+}
