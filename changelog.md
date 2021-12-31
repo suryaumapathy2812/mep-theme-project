@@ -3,4 +3,6 @@
 # [1.3.0]()
 * Migrated from Nx to angular workspace
 * Tailwind css purge script added
-* Added training project to `.gitignore`  
+* Added training project to `.gitignore` 
+* Integrated Daisy UI 
+ 
