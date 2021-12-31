@@ -31,6 +31,6 @@ jobs:
         run: npm run pack
         
       - name: publish
-        run: cd ./dist/libs/theme/ && npm publish
+        run: cd ./dist/theme/ && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
