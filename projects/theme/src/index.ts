@@ -11,9 +11,9 @@ export * from './lib/layout/admin-layout/admin-header/admin-header.component';
 export * from './lib/layout/admin-layout/admin-sidebar/admin-sidebar.component';
 
 
-export * from './lib/layout/auth-layout/auth-layout.module';
-export * from './lib/layout/auth-layout/auth-layout.service';
-export * from './lib/layout/auth-layout/auth-layout.component';
+// export * from './lib/layout/auth-layout/auth-layout.module';
+// export * from './lib/layout/auth-layout/auth-layout.service';
+// export * from './lib/layout/auth-layout/auth-layout.component';
 
 
 export * from './lib/layout/default-layout/default-layout.module';

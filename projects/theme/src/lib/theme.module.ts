@@ -17,7 +17,7 @@ import { ThemeService } from './core/shared/theme.service';
   ],
   exports: [
     AdminLayoutModule,
-    AuthLayoutModule,
+    // AuthLayoutModule,
     DefaultLayoutModule,
   ],
 })

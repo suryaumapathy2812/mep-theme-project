@@ -15,7 +15,7 @@ import { IconsModule } from '../../core/shared/icons/icons.module';
   imports: [
     CommonModule,
     RouterModule,
-    // IconsModule
+    IconsModule
   ], exports: [
     HeaderComponent,
     DefaultLayoutComponent,
