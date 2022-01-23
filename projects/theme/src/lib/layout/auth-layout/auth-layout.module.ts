@@ -11,7 +11,7 @@ import { IconsModule } from '../../core/shared/icons/icons.module';
   ],
   imports: [
     CommonModule,
-    // IconsModule
+    IconsModule
   ], exports: [
     AuthLayoutComponent
   ]
